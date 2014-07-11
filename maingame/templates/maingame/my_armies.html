@@ -1,0 +1,52 @@
+{%  extends "maingame/user_index.html" %}
+{% load staticfiles %}
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+
+
+{%  block content %}
+
+<div class="row">
+    <div class="col-lg-11 col-lg-offset-1">
+        <h1>Armies</h1>
+    </div>
+</div>
+
+    <div class="row">
+    <div class="col-lg-10 col-lg-offset-2">
+        <h2>Finished Armies</h2>
+    </div>
+</div>
+
+    {% for army in view.get_finished_armies %}
+<div class="row">
+        <div class="col-lg-9 col-lg-offset-3">
+            <h3><i class="fa fa-cubes"></i>  <a href="{% url 'army_detail' army.pk  %}">{{army.name }}</a> </h3>
+        </div>
+        <div class="col-lg-8 col-lg-offset-4">
+            Price of Army : {{ army.amount }} <br />
+            Number of Robots : {{ army.number_robots }}
+        </div>
+
+</div>
+{% endfor %}
+
+<div class="row">
+    <div class="col-lg-10 col-lg-offset-2">
+        <h2>Unfinished Armies</h2>
+    </div>
+</div>
+
+    {% for army in view.get_unfinished_armies %}
+<div class="row">
+        <div class="col-lg-9 col-lg-offset-3">
+            <h3><i class="fa fa-cubes"></i>  <a href="{% url 'army_detail' army.pk  %}">{{army.name }}</a> </h3>
+        </div>
+        <div class="col-lg-8 col-lg-offset-4">
+            Price of Army : {{ army.amount }} <br />
+            Number of Robots : {{ army.number_robots }}
+        </div>
+</div>
+{% endfor %}
+
+{%  endblock %}

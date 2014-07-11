@@ -1,0 +1,46 @@
+{%  extends "base.html" %}
+{% load staticfiles %}
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+
+
+
+    {%  block navbar %}
+    <div class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+              <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="#">Welcome {{request.user}}</a>
+              </div>
+              <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="/">Home</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Armies <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="{% url "my_armies" %}">Your Armies</a></li>
+                    <li><a href="{% url "add_army" %}">Create a new Army</a></li>
+                  </ul>
+                </li>
+              </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="active"><a href="/logout/">Logout</a></li>
+                </ul>
+              </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+          </div>
+    {%  endblock %}
+
+
+{%  block content %}
+
+       Bonjour {{ request.user }}!
+
+        voir la <a href="{% url "list_available_maps" %}">liste des maps</a>
+
+{%  endblock %}

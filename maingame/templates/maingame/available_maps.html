@@ -1,0 +1,28 @@
+{%  extends "base.html" %}
+{% load staticfiles %}
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+
+{%  block content %}
+
+    Nom : {{ object.name }} <br />
+    Longueur : {{ object.width }} <br />
+    Longueur : {{ object.height }} <br />
+    {%  if object.author %}
+        Author : {{ object.author }} <br />
+    {%  endif %}
+
+    <table>
+    {% for line in map %}
+        <tr>
+            {% for item in line %}
+                <td>
+                <img src="{% static "maingame/transparent.png" %}" width="{{ object.tile_size }}" height="{{ object.tile_size }}" style="background:url({% get_static_prefix %}/maingame/tiles/{{ object.sprite_file }}.png) -{{ item.0 }}px -{{ item.1 }}px;" />
+                </td>
+            {%  endfor %}
+        </tr>
+    {%  endfor %}
+
+    </table>
+
+{%  endblock %}

@@ -1,0 +1,21 @@
+{%  extends "maingame/user_index.html" %}
+{% load staticfiles %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% get_static_prefix as STATIC_PREFIX %}
+
+
+{%  block content %}
+
+<div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-10">
+        <h1>Create a new Robot</h1>
+
+    <form method="post" class="uniForm">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" value="Create" />
+</form>
+    <div>
+{%  endblock %}

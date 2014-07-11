@@ -1,0 +1,11 @@
+{%  extends "base.html" %}
+{% load staticfiles %}
+
+
+{%  block content %}
+
+    {% for map in object_list %}
+        <li> <a href="{% url 'available_map_detail' map.id %}">{{map.name}}</a></li>
+    {% endfor %}
+
+{%  endblock %}

@@ -1,0 +1,255 @@
+- model: maingame.armyclass
+  pk: 1
+  fields:
+    name: Normal Army
+    max_amount: 90
+    max_robot_number: 6
+    min_robot_number: 3
+
+- model: maingame.chassis
+  pk: 1
+  fields:
+    name: Petit chassis
+    price: 1
+    weight: 0
+    structure_points: 1
+    supported_weight: 11
+    power_consumption: 0
+    weapon_number: 2
+- model: maingame.chassis
+  pk: 2
+  fields:
+    name: Chassis moyen
+    price: 3
+    weight: 0
+    structure_points: 3
+    supported_weight: 16
+    power_consumption: 0
+    weapon_number: 3
+- model: maingame.chassis
+  pk: 3
+  fields:
+    name: Gros chassis
+    price: 5
+    weight: 0
+    structure_points: 4
+    supported_weight: 24
+    power_consumption: 0
+    weapon_number: 3
+
+
+- model: maingame.weapon
+  pk: 1
+  fields:
+    name: Canon 1 coup
+    price: 1
+    weight: 1
+    structure_points: 0
+    supported_weight: 0
+    power_consumption: 1
+    damage: 1
+    shot_per_turn: 1
+    range: 1
+- model: maingame.weapon
+  pk: 2
+  fields:
+    name: Canon 2 coup
+    price: 3
+    weight: 1
+    structure_points: 0
+    supported_weight: 0
+    power_consumption: 2
+    damage: 1
+    shot_per_turn: 2
+    range: 1
+- model: maingame.weapon
+  pk: 3
+  fields:
+    name: Minigun
+    price: 5
+    weight: 2
+    structure_points: 0
+    supported_weight: 0
+    power_consumption: 3
+    damage: 1
+    shot_per_turn: 4
+    range: 1
+- model: maingame.weapon
+  pk: 4
+  fields:
+    name: Mini-Missile
+    price: 3
+    weight: 2
+    structure_points: 0
+    supported_weight: 0
+    power_consumption: 2
+    damage: 3
+    shot_per_turn: 1
+    range: 2
+- model: maingame.weapon
+  pk: 5
+  fields:
+    name: Petite batterie Mini Missiles
+    price: 5
+    weight: 3
+    structure_points: 0
+    supported_weight: 0
+    power_consumption: 3
+    damage: 3
+    shot_per_turn: 2
+    range: 2
+- model: maingame.weapon
+  pk: 6
+  fields:
+    name: Batterie Mini Missiles
+    price: 7
+    weight: 5
+    structure_points: 0
+    supported_weight: 0
+    power_consumption: 5
+    damage: 3
+    shot_per_turn: 4
+    range: 2
+- model: maingame.weapon
+  pk: 7
+  fields:
+    name: Missile
+    price: 5
+    weight: 3
+    structure_points: 0
+    supported_weight: 0
+    power_consumption: 3
+    damage: 6
+    shot_per_turn: 1
+    range: 2
+- model: maingame.weapon
+  pk: 8
+  fields:
+    name: Petite Batterie de missiles
+    price: 7
+    weight: 5
+    structure_points: 0
+    supported_weight: 0
+    power_consumption: 4
+    damage: 6
+    shot_per_turn: 2
+    range: 2
+- model: maingame.weapon
+  pk: 9
+  fields:
+    name: Batterie de missiles
+    price: 9
+    weight: 8
+    structure_points: 0
+    supported_weight: 0
+    power_consumption: 4
+    damage: 6
+    shot_per_turn: 4
+    range: 2
+
+
+- model: maingame.armorplate
+  pk: 1
+  fields:
+    name: Petit blindage
+    price: 5
+    weight: 4
+    structure_points: 0
+    supported_weight: 0
+    power_consumption: 0
+    armor_value: 1
+- model: maingame.armorplate
+  pk: 2
+  fields:
+    name: Blindage
+    price: 8
+    weight: 10
+    structure_points: 0
+    supported_weight: 0
+    power_consumption: 0
+    armor_value: 2
+
+- model: maingame.generator
+  pk: 1
+  fields:
+    name: Petit générateur
+    price: 1
+    weight: 3
+    structure_points: 1
+    supported_weight: 0
+    power_consumption: 0
+    power: 5
+- model: maingame.generator
+  pk: 2
+  fields:
+    name: Générateur
+    price: 3
+    weight: 5
+    structure_points: 2
+    supported_weight: 0
+    power_consumption: 0
+    power: 10
+- model: maingame.generator
+  pk: 3
+  fields:
+    name: Gros Générateur
+    price: 5
+    weight: 8
+    structure_points: 3
+    supported_weight: 0
+    power_consumption: 0
+    power: 20
+
+
+- model: maingame.motor
+  pk: 1
+  fields:
+    name: moteur simple
+    price: 1
+    weight: 4
+    structure_points: 2
+    supported_weight: 12
+    power_consumption: 2
+    speed: 1
+- model: maingame.motor
+  pk: 2
+  fields:
+    name: moteur moyen
+    price: 3
+    weight: 6
+    structure_points: 3
+    supported_weight: 20
+    power_consumption: 4
+    speed: 2
+- model: maingame.motor
+  pk: 3
+  fields:
+    name: moteur rapide
+    price: 5
+    weight: 6
+    structure_points: 1
+    supported_weight: 10
+    power_consumption: 4
+    speed: 4
+- model: maingame.motor
+  pk: 4
+  fields:
+    name: moteur lourd
+    price: 5
+    weight: 10
+    structure_points: 4
+    supported_weight: 30
+    power_consumption: 6
+    speed: 2
+
+
+- model: maingame.gadget
+  pk: 1
+  fields:
+    name: destructeur de pont
+    price: 4
+    weight: 4
+    structure_points: 0
+    supported_weight: 0
+    power_consumption: 4
+    name_condition_function: check_desctructeur_pont

@@ -1,0 +1,45 @@
+{% load staticfiles %}
+{% load static %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="{{ LANGUAGE_CODE }}" xml:lang="{{ LANGUAGE_CODE }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <title>Robots Wars !!!</title>
+
+
+    <link rel="stylesheet" href="{% static "twitter_bootstrap/dist/css/bootstrap.css" %}" type="text/css" />
+    <link rel="stylesheet" href="{% static "twitter_bootstrap/dist/css/bootstrap-theme.css" %}" type="text/css" />
+
+    <link rel="stylesheet" href="{% static "font_awesome/css/font-awesome.css" %}" type="text/css" />
+    <link rel="stylesheet" href="{% static "font_awesome/css/font-awesome.min.css" %}" type="text/css" />
+
+    <link rel="stylesheet" href="{% static "maingame/css/maingame.css" %}" type="text/css" />
+
+
+    <script src="{% static "maingame/js/jquery-1.11.0.min.js" %}"></script>
+    <script src="{% static "twitter_bootstrap/dist/js/bootstrap.min.js" %}"></script>
+
+</head>
+
+
+<body {% block bodyclass %}{% endblock %}>
+
+<div class="container">
+
+    {%  block navbar %}
+    {%  endblock %}
+
+
+    {%  block content %}
+    {%  endblock %}
+
+
+</div>
+
+{%  block footer %}
+        <br ><br ><br ><br ><br >
+{%  endblock %}
+</body>
+</html>

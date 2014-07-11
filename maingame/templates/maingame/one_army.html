@@ -1,0 +1,25 @@
+{%  extends "maingame/user_index.html" %}
+{% load staticfiles %}
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+
+
+{%  block content %}
+
+<div class="row">
+    <div class="col-lg-11 col-lg-offset-1">
+        <h1>{{ object.name }}</h1>
+    </div>
+</div>
+
+<div class="row">
+        <div class="col-lg-4 vcenter">
+            <button type="button" class="btn btn-default">Good for Battle!</button>
+        </div><!--
+    --><div class="col-lg-8 vcenter">
+            <h3>Price of Army : {{ object.amount }} </h3>
+            <h3>Number of Robots : {{ object.number_robots }} <a class="btn btn-default" role="button" href="{% url 'add_robot_to_army'  %}">Add Robot</a></h3>
+        </div>
+
+</div>
+{%  endblock %}

@@ -1,0 +1,12 @@
+{%  extends "base.html" %}
+{% load staticfiles %}
+{% load static %}
+{% get_static_prefix as STATIC_PREFIX %}
+
+{%  block content %}
+        {{ request.user }}
+       Bonjour !
+
+        voir la <a href="{% url "list_available_maps" %}">liste des maps</a>
+
+{%  endblock %}

@@ -48,7 +48,14 @@ coverage.xml
 # Django stuff:
 *.log
 *.pot
+local_settings.py
+
 
 # Sphinx documentation
 docs/_build/
+public/media/static/
+.idea/
 
+
+#project
+robotswars
